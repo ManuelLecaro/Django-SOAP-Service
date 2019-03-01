@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<meta charset="UTF-8">
+	<title>{% block title %}Form_Rating{% endblock %}</title>
+</head>
+<body>
+	<div class="container">
+		
+	<form method="post">
+	{% csrf_token %}
+	<h3> ¿Desea eliminar el rating? </h3>
+
+	<button class="btn btn-danger" type="submit"> Si, eliminar</button>
+	<a class="btn btn-default" href="{% url 'listRating.html' $}"> Cancelar </a>
+</form>
+	</div>
+	
+</body>
+</html>
